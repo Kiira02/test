@@ -1,0 +1,26 @@
+C:\Users\Алексей\documents\visual studio 2012\Projects\InetMagaz\InetMagazLibrary\bin\Debug\InetMagazLibrary.dll.config
+C:\Users\Алексей\documents\visual studio 2012\Projects\InetMagaz\InetMagazLibrary\bin\Debug\InetMagazLibrary.dll
+C:\Users\Алексей\documents\visual studio 2012\Projects\InetMagaz\InetMagazLibrary\bin\Debug\InetMagazLibrary.pdb
+C:\Users\Алексей\documents\visual studio 2012\Projects\InetMagaz\InetMagazLibrary\obj\Debug\InetMagazLibrary.dll
+C:\Users\Алексей\documents\visual studio 2012\Projects\InetMagaz\InetMagazLibrary\obj\Debug\InetMagazLibrary.pdb
+E:\InetMagaz\InetMagazLibrary\bin\Debug\InetMagazLibrary.dll.config
+E:\InetMagaz\InetMagazLibrary\bin\Debug\InetMagazLibrary.dll
+E:\InetMagaz\InetMagazLibrary\bin\Debug\InetMagazLibrary.pdb
+E:\InetMagaz\InetMagazLibrary\obj\Debug\InetMagazLibrary.dll
+E:\InetMagaz\InetMagazLibrary\obj\Debug\InetMagazLibrary.pdb
+K:\InetMagaz\InetMagazLibrary\bin\Debug\InetMagazLibrary.dll.config
+K:\InetMagaz\InetMagazLibrary\bin\Debug\InetMagazLibrary.dll
+K:\InetMagaz\InetMagazLibrary\bin\Debug\InetMagazLibrary.pdb
+K:\InetMagaz\InetMagazLibrary\obj\Debug\InetMagazLibrary.dll
+K:\InetMagaz\InetMagazLibrary\obj\Debug\InetMagazLibrary.pdb
+C:\Users\Алексей\Documents\Visual Studio 2012\Projects\MvcApplication10\InetMagazLibrary\bin\Debug\InetMagazLibrary.dll.config
+C:\Users\Алексей\Documents\Visual Studio 2012\Projects\MvcApplication10\InetMagazLibrary\bin\Debug\InetMagazLibrary.dll
+C:\Users\Алексей\Documents\Visual Studio 2012\Projects\MvcApplication10\InetMagazLibrary\bin\Debug\InetMagazLibrary.pdb
+C:\Users\Алексей\Documents\Visual Studio 2012\Projects\MvcApplication10\InetMagazLibrary\obj\Debug\InetMagazLibrary.dll
+C:\Users\Алексей\Documents\Visual Studio 2012\Projects\MvcApplication10\InetMagazLibrary\obj\Debug\InetMagazLibrary.pdb
+C:\1\IMZ\trunk\InetMagaz\InetMagazLibrary\bin\Debug\InetMagazLibrary.dll.config
+C:\1\IMZ\trunk\InetMagaz\InetMagazLibrary\bin\Debug\InetMagazLibrary.dll
+C:\1\IMZ\trunk\InetMagaz\InetMagazLibrary\bin\Debug\InetMagazLibrary.pdb
+C:\1\IMZ\trunk\InetMagaz\InetMagazLibrary\obj\Debug\InetMagazLibrary.csprojResolveAssemblyReference.cache
+C:\1\IMZ\trunk\InetMagaz\InetMagazLibrary\obj\Debug\InetMagazLibrary.dll
+C:\1\IMZ\trunk\InetMagaz\InetMagazLibrary\obj\Debug\InetMagazLibrary.pdb

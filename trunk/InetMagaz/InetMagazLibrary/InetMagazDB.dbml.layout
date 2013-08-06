@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="InetMagazDB">
+  <DataContextMoniker Name="/InetMagazDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="d56964f2-3d03-489a-8fe0-d78fb9bdf4a8" absoluteBounds="0.75, 0.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/InetMagazDBDataContext/History" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bd9378ca-b134-44d0-ac19-cbf9e979ee1c" absoluteBounds="0.765, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5008189e-48bf-45b5-a3f6-cd22d893bd18" absoluteBounds="3.75, 0.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/InetMagazDBDataContext/Product" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0166022f-006d-488b-8466-8d3ab7c5923d" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9386f9b2-f23c-4664-9e30-3a65661da79d" absoluteBounds="0.75, 2.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/InetMagazDBDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5ebce97b-55f1-4360-a298-287cf90a2ebe" absoluteBounds="0.76499999999999968, 3.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
