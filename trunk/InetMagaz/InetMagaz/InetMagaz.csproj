@@ -253,6 +253,7 @@
     <Content Include="Scripts\xfade.js" />
     <Content Include="Templates\Basket.html" />
     <Content Include="Templates\BuyGames.html" />
+    <Content Include="Templates\Category.html" />
     <Content Include="Templates\HomePage.html" />
     <Content Include="Templates\License.html" />
     <Content Include="Templates\Product.html" />

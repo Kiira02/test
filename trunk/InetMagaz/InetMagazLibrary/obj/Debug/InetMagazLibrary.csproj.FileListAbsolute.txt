@@ -24,3 +24,8 @@ C:\1\IMZ\trunk\InetMagaz\InetMagazLibrary\bin\Debug\InetMagazLibrary.pdb
 C:\1\IMZ\trunk\InetMagaz\InetMagazLibrary\obj\Debug\InetMagazLibrary.csprojResolveAssemblyReference.cache
 C:\1\IMZ\trunk\InetMagaz\InetMagazLibrary\obj\Debug\InetMagazLibrary.dll
 C:\1\IMZ\trunk\InetMagaz\InetMagazLibrary\obj\Debug\InetMagazLibrary.pdb
+C:\1\Test\test\trunk\InetMagaz\InetMagazLibrary\bin\Debug\InetMagazLibrary.dll.config
+C:\1\Test\test\trunk\InetMagaz\InetMagazLibrary\bin\Debug\InetMagazLibrary.dll
+C:\1\Test\test\trunk\InetMagaz\InetMagazLibrary\bin\Debug\InetMagazLibrary.pdb
+C:\1\Test\test\trunk\InetMagaz\InetMagazLibrary\obj\Debug\InetMagazLibrary.dll
+C:\1\Test\test\trunk\InetMagaz\InetMagazLibrary\obj\Debug\InetMagazLibrary.pdb

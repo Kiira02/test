@@ -25,7 +25,7 @@
         $(this).children().css('color', 'black');
     });
     $("#gameBtn").bind("click", function() {
-        LoadHomePage('BuyGames', true);
+        LoadHomePage('BuyGames', true, '7');
     });
     $("#gameBtn").bind("mouseover", function () {
         $("#star2").css("display", "");
@@ -251,122 +251,110 @@
     });
 }
 
-function LoadTempl2(data) {
-    $(data).each(function() {
-        $('<div/>', {
-            id: this.ProductID + "_template",
-            addClass: 'item2',
-            attr: { gameCont: "1" }
-        }).appendTo('#test');
+function LoadTempl2(data, type) {
+    $(data).each(function () {
+        if (type == "7" || type == this.categoryType) {
+            $('<div/>', {
+                id: this.ProductID + "_template",
+                addClass: 'item2',
+                attr: { gameCont: "1" }
+            }).appendTo('#test');
         
-        $('<div/>', {
-            id: this.ProductID + "_container",
-            addClass: "gameTextContainer gameTextProp"
-        }).appendTo("#" + this.ProductID + "_template");
+            $('<div/>', {
+                id: this.ProductID + "_container",
+                addClass: "gameTextContainer gameTextProp"
+            }).appendTo("#" + this.ProductID + "_template");
         
-        $('<img/>', {
-            id: this.ProductID + "_image",
-            src: this.ImageUrl,
-            css: { position: 'relative', maxWidth: '300px'}
-        }).appendTo("#" + this.ProductID + "_template");
+            $('<img/>', {
+                id: this.ProductID + "_image",
+                src: this.ImageUrl,
+                css: { position: 'relative', maxWidth: '300px'}
+            }).appendTo("#" + this.ProductID + "_template");
         
-        $('<span></span>', {
-            id: this.ProductID + "_span",
-            text: this.Name,
-            addClass: "span"
-        }).appendTo("#" + this.ProductID + "_container");
+            $('<span></span>', {
+                id: this.ProductID + "_span",
+                text: this.Name,
+                addClass: "span"
+            }).appendTo("#" + this.ProductID + "_container");
         
-        $('<div/>', {
-            id: this.ProductID + "_descrId",
-            attr: { descrContainer: "1" },
-            addClass: 'gameExplCont',
-            css: {height: "100%"}
-        }).appendTo("#" + this.ProductID + "_template");
+            $('<div/>', {
+                id: this.ProductID + "_descrId",
+                attr: { descrContainer: "1" },
+                addClass: 'gameExplCont',
+                css: {height: "100%"}
+            }).appendTo("#" + this.ProductID + "_template");
 
-        $('<span></span>', {
-            id: this.ProductID + "_description",
-            text: this.Description,
-            addClass: 'descriptProp'
-        }).appendTo("#" + this.ProductID + "_descrId");
+            $('<span></span>', {
+                id: this.ProductID + "_description",
+                text: this.Description,
+                addClass: 'descriptProp'
+            }).appendTo("#" + this.ProductID + "_descrId");
         
-        $('<div/>', {
-            id: this.ProductID + "_buyButton",
-            addClass: "buyButtonGame"
-        }).appendTo("#" + this.ProductID + "_descrId");
+            $('<div/>', {
+                id: this.ProductID + "_buyButton",
+                addClass: "buyButtonGame"
+            }).appendTo("#" + this.ProductID + "_descrId");
         
-        $('<span/>', {
-            text: "Buy Game"
-        }).appendTo("#" + this.ProductID + "_buyButton");
+            $('<span/>', {
+                text: "Buy Game"
+            }).appendTo("#" + this.ProductID + "_buyButton");
 
-        var template = $("#" + this.ProductID + "_template");
+            var template = $("#" + this.ProductID + "_template");
         
-        template.bind("click", function () {
-            $(this).stop();
-            $('img', this).css('top', 0);
-            var heImg;
-            //if ($(this).width() == 300) {
-            //    $(this).css('width', 600);
-            //    $('img', this).css('min-width', 600);
-            //    $('img', this).css('max-width', 600);
-            //    heImg = $('img', this).height();
-            //    $(this).css('height', heImg);
-            //} else {
-            //    $(this).css('width', 300);
-            //    $('img', this).css('min-width', 0);
-            //    $('img', this).css('max-width', 300);
-            //    heImg = $('img', this).height();
-            //    $(this).css('height', heImg);
-            //}
-            $('#test').masonry();
-        });
+            template.bind("click", function () {
+                $(this).stop();
+                $('img', this).css('top', 0);
+                $('#test').masonry();
+            });
         
-        template.bind('mouseover', function () {
-            var obj = this;
-            var heAnim = $('img', this).height();
+            template.bind('mouseover', function () {
+                var obj = this;
+                var heAnim = $('img', this).height();
             
-            if ($(obj).width() == 300) {
-                    setTimeout(function() {
-                        $('img', obj).stop().animate({ top: -heAnim });
-                        $('div.gameTextContainer', obj).removeClass('gameTextProp').addClass('gameTextPropOver');
-                        $('div.gameTextContainer', obj).css('background-color', '#4D7BD6');
-                        $('div.gameTextContainer', obj).css('color', 'white');
-                        $('div.gameTextContainer', obj).stop().animate({ bottom: +heAnim - 35 });
-                        $('div[descrContainer="1"]', obj).stop().animate({ marginTop: -heAnim });
-                    }, 300);
-                } else {
-                    $('img', obj).stop().css('top', 0);
-                    $('div.gameTextContainer', obj).removeClass('gameTextProp').addClass('gameTextPropOver');
-                    $('div.gameTextContainer', obj).css('background-color', 'aliceblue');
-                    $('div.gameTextContainer', obj).css('color', 'black');
-                    $('div.gameTextContainer', obj).stop().css('bottom', 0);
-                    $('div[descrContainer="1"]', obj).stop().css('margin-top', 0);
-                }
-        });
-        
-        template.bind('mouseout', function () {
-            var obj = this;
-            var heAnim = $('img', this).height();
-            setTimeout(function() {
                 if ($(obj).width() == 300) {
-                    $('img', obj).stop().animate({ top: 0 });
-                    $('div.gameTextContainer', obj).removeClass('gameTextPropOver').addClass('gameTextProp');
-                    $('div.gameTextContainer', obj).css('background-color', 'aliceblue');
-                    $('div.gameTextContainer', obj).css('color', 'black');
-                    $('div.gameTextContainer', obj).stop().animate({ bottom: 0 });
-                    $('div[descrContainer="1"]', obj).stop().animate({ marginTop: 0 });
-                } else {
-                    $('img', obj).stop().css('top', 0);
-                    $('div.gameTextContainer', obj).removeClass('gameTextPropOver').addClass('gameTextProp');
-                    $('div.gameTextContainer', obj).css('background-color', 'aliceblue');
-                    $('div.gameTextContainer', obj).css('color', 'black');
-                    $('div.gameTextContainer', obj).stop().css('bottom', 0);
-                    $('div[descrContainer="1"]', obj).stop().css('margin-top', 0);
-                }
+                        setTimeout(function() {
+                            $('img', obj).stop().animate({ top: -heAnim }, 200);
+                            $('div.gameTextContainer', obj).removeClass('gameTextProp').addClass('gameTextPropOver');
+                            $('div.gameTextContainer', obj).css('background-color', '#4D7BD6');
+                            $('div.gameTextContainer', obj).css('color', 'white');
+                            $('div.gameTextContainer', obj).stop().animate({ bottom: +heAnim - 35 }, 200);
+                            $('div[descrContainer="1"]', obj).stop().animate({ marginTop: -heAnim }, 200);
+                        }, 300);
+                    } else {
+                        $('img', obj).stop().css('top', 0);
+                        $('div.gameTextContainer', obj).removeClass('gameTextProp').addClass('gameTextPropOver');
+                        $('div.gameTextContainer', obj).css('background-color', 'aliceblue');
+                        $('div.gameTextContainer', obj).css('color', 'black');
+                        $('div.gameTextContainer', obj).stop().css('bottom', 0);
+                        $('div[descrContainer="1"]', obj).stop().css('margin-top', 0);
+                    }
+            });
+        
+            template.bind('mouseout', function () {
+                var obj = this;
+                var heAnim = $('img', this).height();
+                setTimeout(function() {
+                    if ($(obj).width() == 300) {
+                        $('img', obj).stop().animate({ top: 0 }, 200);
+                        $('div.gameTextContainer', obj).removeClass('gameTextPropOver').addClass('gameTextProp');
+                        $('div.gameTextContainer', obj).css('background-color', 'aliceblue');
+                        $('div.gameTextContainer', obj).css('color', 'black');
+                        $('div.gameTextContainer', obj).stop().animate({ bottom: 0 }, 200);
+                        $('div[descrContainer="1"]', obj).stop().animate({ marginTop: 0 }, 200);
+                    } else {
+                        $('img', obj).stop().css('top', 0);
+                        $('div.gameTextContainer', obj).removeClass('gameTextPropOver').addClass('gameTextProp');
+                        $('div.gameTextContainer', obj).css('background-color', 'aliceblue');
+                        $('div.gameTextContainer', obj).css('color', 'black');
+                        $('div.gameTextContainer', obj).stop().css('bottom', 0);
+                        $('div[descrContainer="1"]', obj).stop().css('margin-top', 0);
+                    }
+                }, 300);
+            });
+            setTimeout(function() {
+                $('#test').masonry();
             }, 300);
-        });
-        setTimeout(function() {
-            $('#test').masonry();
-        }, 300);
+        }
     });
     
     $('#test').masonry({
@@ -386,28 +374,50 @@ function LoadTempl2(data) {
         $('span.descriptProp', $(this).parent()).css('height', he - 70);
         $('#test').css('height', 900);
     });
+
+    LoadCategories();
 }
 
-function LoadProducts() {
+function LoadProducts(type) {
     $.post("Database/GetProducts", function (data) {
-        $.get('Templates/Product.html', function (templ) {
-            //LoadTemplates(templ, data);
-            LoadTempl2(data);
+        $.get('Templates/Product.html', function () {
+            LoadTempl2(data, type);
         }, 'html');
     });
-    //$('table[GameBuy="1"]').each(function() {
-    //    $(this).bind('click', function () {
-    //        var userId = getCookie('userID');
-    //        var gamesInBasket = getCookie('gameID');
-    //        if (userId != '') {
-    //            setCookie("gameID", $(this).attr("GameID") + ";" + (gamesInBasket == undefined ? '' : gamesInBasket), { expires: 1800 });
-    //            //$.post("Database/AddToHistory", { GameId: $(this).attr('GameID'), UserId: userId }, function (data) {
-    //            //});
-    //        } else {
-    //            alert("Please login to the site to buy this game!");
-    //        }
-    //    });
-    //});
+}
+
+function LoadCategories() {
+    $.post("Database/GetCategories", function (data) {
+        $.get('Templates/Category.html', function (templ) {
+            $.template('categories', templ);
+            $(data).each(function () {
+                $.tmpl('categories', this, {
+                    category: this.categoryType,
+                    categoryName: this.CategoryName
+                }).appendTo('#categoryName');
+            });
+        }, 'html');
+    });
+    BindEventForCategory();
+}
+
+function BindEventForCategory() {
+    $('li.categoryStyle').each(function () {
+        $(this).bind('click', function () {
+            var type = $(this)[0].id.replace("CategoryType_", "");
+            LoadHomePage('BuyGames', true, type);
+        });
+
+        $(this).bind('mouseover', function() {
+            $(this).stop().animate({ backgroundColor: "#7AA5CE", color: "white" }, 200);
+            $('div.categoryBg', this).css("border-right", "1px solid #7AA5CE");
+        });
+        
+        $(this).bind('mouseout', function () {
+            $(this).stop().animate({ backgroundColor: "white", color: "black" }, 200);
+            $('div.categoryBg', this).css("border-right", "1px solid #d5d5d5");
+        });
+    });
 }
 
 function LoadTemplates(templ, data) {
@@ -455,20 +465,20 @@ function LoadTemplateForBasket(templ, data) {
     }
 }
 
-function LoadHomePage(name, val) {
+function LoadHomePage(name, val, type) {
     $.get('Templates/' + name + '.html', function (templ) {
         $('#test2').html('');
         $.template('page', templ);
         $.tmpl('page').appendTo('#test2');
         if (val == true) {
-            LoadProducts();
+            LoadProducts(type);
         }
     }, 'html');
 }
 
 function SearchForProducts(value) {
     if (value == 'Search...') {
-        LoadHomePage('BuyGames', true);
+        LoadHomePage('BuyGames', true, '7');
     } else {
         $.post("Database/SearchForProducts", { name: value }, function(val) {
             if (val == -1) {

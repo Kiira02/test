@@ -42,10 +42,28 @@ namespace MvcApplication10.Models
                 tovar.Add("Description", item.Description);
                 tovar.Add("ImageUrl", item.ImageUrl);
                 tovar.Add("Price", item.Price.ToString());
+                tovar.Add("categoryType", item.categoryType.ToString());
                 products.Add(tovar);
             }
 
             return products;
+        }
+
+        public List<Dictionary<string, string>> GetCategories()
+        {
+            List<Dictionary<string, string>> categories = new List<Dictionary<string, string>>();
+
+            var context = new InetMagazDBDataContext(ConfigurationManager.ConnectionStrings["MyBase"].ConnectionString);
+
+            foreach (var item in context.Categories)
+            {
+                Dictionary<string, string> categoryItem = new Dictionary<string, string>();
+                categoryItem.Add("categoryType", item.categoryType.ToString());
+                categoryItem.Add("CategoryName", item.CategoryName);
+                categories.Add(categoryItem);
+            }
+
+            return categories;
         }
 
         public int SearchForProducts(string Name)

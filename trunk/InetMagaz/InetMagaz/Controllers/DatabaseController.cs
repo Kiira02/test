@@ -55,6 +55,13 @@ namespace MvcApplication10.Controllers
             return Json(main.AddToHistory(user.GameId, user.UserId));
         }
 
+        [HttpPost]
+        public ActionResult GetCategories(user user)
+        {
+            Main main = new Main();
+            return Json(main.GetCategories());
+        }
+
     }
 
     [Serializable]

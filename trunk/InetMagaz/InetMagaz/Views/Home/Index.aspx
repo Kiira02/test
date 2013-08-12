@@ -13,7 +13,7 @@
     <script src="./Scripts/jquery.tmpl.min.js"></script>
     <script src="./Scripts/jquery.blockUI.js"></script>
     <script src="./Scripts/jquery.cycle.all.min.js"></script>
-    <script src="./Scripts/jquery.color.js"></script>
+    <!--<script src="./Scripts/jquery.color.js"></script>-->
     <script src="./Scripts/xfade.js"></script>
     <script src="./Scripts/masonry.pkgd.min.js"></script>
     <script type="text/javascript">
@@ -332,9 +332,9 @@
                 </td>
             </tr>
             <tr>
-                <td>
-                    <div id="test2"></div>
-                    <div style="height: 900px;">
+                <td style="text-align: -webkit-center">
+                    <div id="test2" style="width: 960px; min-height: 900px; text-align: center"></div>
+                    <div>
                         <div id="testing" class="itemConteiner"></div>
                     </div>
                 </td>

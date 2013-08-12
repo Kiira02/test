@@ -1,19 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="InetMagaz" Class="InetMagazDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.4.106\MSSQLSERVER2008;Initial Catalog=InetMagaz;User ID=test" SettingsObjectName="InetMagazLibrary.Properties.Settings" SettingsPropertyName="InetMagazConnectionString2" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=KIIRAPC2;Initial Catalog=InetMagaz;Integrated Security=True" SettingsObjectName="InetMagazLibrary.Properties.Settings" SettingsPropertyName="InetMagazConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.History" Member="Histories">
     <Type Name="History">
       <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="IDlog" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="HistoryProducts" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Products" Member="Products">
-    <Type Name="Product">
-      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="ImageUrl" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="Price" Type="System.Double" DbType="Float" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.Users" Member="Users">
@@ -23,6 +14,23 @@
       <Column Name="Password" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="Emai" Type="System.String" DbType="VarChar(250) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="isAdmin" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Categories" Member="Categories">
+    <Type Name="Category">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CategoryName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="categoryType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Products" Member="Products">
+    <Type Name="Product">
+      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="ImageUrl" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="categoryType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
   <Function Name="dbo.Search" Method="Search">
